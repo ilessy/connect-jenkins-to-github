@@ -33,6 +33,7 @@ pipeline {
             steps {
                 dir("${env.WORKSPACE}/scripts"){
                     sh("./fibonacci.sh ${env.NUMBER}")
+                    sh("must fail")
                 }
             }
         }
